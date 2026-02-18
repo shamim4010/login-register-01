@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#253144] flex justify-center items-center w-full h-screen font-['Manrope',sans-serif]">
+    <div class="overflow-hidden w-[40%] p-[5px]">
+        <div class="bg-[#253144] border-7 solid border-[#253144] rounded-lg pt-9 pb-9 pl-6 pr-6 shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.1),inset_4px_4px_12px_rgba(0,0,0,0.2)]">
+            <div class="w-full">
+                <from class="flex flex-col justify-center items-center gap-8">
+                    <div>
+                        <i class="fa-solid fa-user" style="color:hsla(166, 86%, 48%, 1.00);"></i>
+                        <div>
+                            <label for="">username</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-envelope" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                        <div>
+                            <label for="">email address</label>
+                            <input type="email">
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-lock" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                        <div>
+                            <label for="">create password</label>
+                            <input type="password">
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-lock" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                        <div>
+                            <label for="">confirm password</label>
+                            <input type="password">
+                        </div>
+                    </div>
+                    <button>Register</button>
+                    <div>
+                        <button>Google Login</button>
+                        <button>Github Login</button>
+                    </div>
+                </from>
+            </div>
+            <div class="none">
+                <from>
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <button></button>
+                    <div><button></button>
+                        <button></button>
+                    </div>
+                </from>
+            </div>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+    <script src="./register.js"></script>
+</body>
+</html>
