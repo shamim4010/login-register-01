@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register Page</title>
+    <title>Login Register</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,60 +11,117 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#253144] flex justify-center items-center w-full h-screen font-['Manrope',sans-serif]">
-    <div class="overflow-hidden w-[40%] p-[5px]">
-        <div class="bg-[#253144] border-7 solid border-[#253144] rounded-lg pt-9 pb-9 pl-6 pr-6 shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.1),inset_4px_4px_12px_rgba(0,0,0,0.2)]">
-            <div class="w-full">
+    <div class="w-[40%] p-[5px]">
+        <div class="bg-[#253144] border-7 solid border-[#253144] rounded-lg pt-9
+        relative
+        pb-9 pl-6 pr-6
+        shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.1),inset_4px_4px_12px_rgba(0,0,0,0.2),-4px_-4px_8px_rgba(255,255,255,0.1),4px_4px_12px_rgba(0,0,0,0.2)]">
+            <input type="checkbox" name="" id="check-box" class="peer hidden"/>
+            <div class="w-full peer-checked:hidden">
                 <from class="flex flex-col justify-center items-center gap-8">
-                    <div>
-                        <i class="fa-solid fa-user" style="color:hsla(166, 86%, 48%, 1.00);"></i>
-                        <div>
-                            <label for="">username</label>
-                            <input type="text">
+                  <label class="absolute -top-5 pl-2 pr-2 pt-1 pb-1 bg-[#253144]
+                  text-[#11e4b3] rounded-lg
+                  shadow-[-4px_-4px_8px_rgba(255,255,255,0.1),4px_4px_12px_rgba(0,0,0,0.2)]">Register</label>
+                    <div class="flex justify-center items-center gap-3
+                    relative">
+                        <i class="fa-solid fa-user border-r-1 solid pr-7 absolute left-2" style="color:hsla(166, 86%, 48%, 1.00);"></i>
+                        <div class="w-full">
+                            <input type="text" id="user-name-rg" class="rounded-2xl pl-12 pt-2 pb-2 text-[#11e4b3] text-sm peer focus:border focus:outline-none focus:border-[#11e4b3] valid:border-[#11e4b3] valid-bg-none shadow-[-3px_-3px_14px_rgba(255,255,255,0.2),3px_3px_14px_rgba(0,0,0,0.5)] p-1" required>
+                            <label class="text-[rgba(255,255,255,0.4)] absolute left-12 top-1.5 peer-focus:-top-2 peer-valid:-top-2 pointer-events-none peer-focus:bg-[#11e4b3] peer-valid:bg-[#11e4b3] peer-focus:rounded-[0.4rem] peer-valid:rounded-[0.4rem] peer-focus:z-2 peer-focus:text-xs peer-valid:text-xs peer-focus:text-[#253144] peer-valid:text-[#253144] peer-focus:pl-2 peer-focus:pr-2 peer-valid:pl-2 peer-valid:pr-2 transition-all duration-1000">username</label>
                         </div>
                     </div>
-                    <div>
-                        <i class="fa-regular fa-envelope" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                    <div class="flex justify-center items-center gap-3 relative">
+                        <i class="fa-regular fa-envelope border-r-1 solid pr-7 absolute left-2" style="color: hsla(166, 86%, 48%, 1.00);"></i>
                         <div>
-                            <label for="">email address</label>
-                            <input type="email">
+                            <input type="email" id="email-rg" class="rounded-2xl pl-12 pt-2 pb-2 text-[#11e4b3] text-sm peer focus:border focus:outline-none focus:border-[#11e4b3] valid:border-[#11e4b3] valid-bg-none shadow-[-3px_-3px_14px_rgba(255,255,255,0.2),3px_3px_14px_rgba(0,0,0,0.5)] p-1" required>
+                            <label class="text-[rgba(255,255,255,0.4)] absolute left-12 top-1.5 peer-focus:-top-2 peer-valid:-top-2 pointer-events-none peer-focus:bg-[#11e4b3] peer-valid:bg-[#11e4b3] peer-focus:rounded-[0.4rem] peer-valid:rounded-[0.4rem] peer-focus:z-2 peer-focus:text-xs peer-valid:text-xs peer-focus:text-[#253144] peer-valid:text-[#253144] peer-focus:pl-2 peer-focus:pr-2 peer-valid:pl-2 peer-valid:pr-2 transition-all duration-1000">email address</label>
                         </div>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-lock" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                    <div class="flex justify-center items-center gap-3 relative">
+                        <i class="fa-solid fa-lock border-r-1 solid pr-7 absolute left-2" style="color: hsla(166, 86%, 48%, 1.00);"></i>
                         <div>
-                            <label for="">create password</label>
-                            <input type="password">
+                            <input type="password" id="password-rg" class="rounded-2xl pl-12 pt-2 pb-2 text-[#11e4b3] text-sm peer focus:border focus:outline-none focus:border-[#11e4b3] valid:border-[#11e4b3] shadow-[-3px_-3px_14px_rgba(255,255,255,0.2),3px_3px_14px_rgba(0,0,0,0.5)] p-1" required>
+                            <label class="text-[rgba(255,255,255,0.4)] absolute left-12 top-1.5 peer-focus:-top-2 peer-valid:-top-2 pointer-events-none peer-focus:bg-[#11e4b3] peer-valid:bg-[#11e4b3] peer-focus:rounded-[0.4rem] peer-valid:rounded-[0.4rem] peer-focus:z-2 peer-focus:text-xs peer-valid:text-xs peer-focus:text-[#253144] peer-valid:text-[#253144] peer-focus:pl-2 peer-focus:pr-2 peer-valid:pl-2 peer-valid:pr-2 transition-all duration-1000">create password</label>
                         </div>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-lock" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                    <div class="flex justify-center items-center gap-3 relative">
+                        <i class="fa-solid fa-lock border-r-1 solid pr-7 absolute left-2" style="color: hsla(166, 86%, 48%, 1.00);"></i>
                         <div>
-                            <label for="">confirm password</label>
-                            <input type="password">
+                            <input type="password" id="confirm-password-rg" class="rounded-2xl pl-12 pt-2 pb-2 text-[#11e4b3] text-sm peer focus:border focus:outline-none focus:border-[#11e4b3] valid:border-[#11e4b3] shadow-[-3px_-3px_14px_rgba(255,255,255,0.2),3px_3px_14px_rgba(0,0,0,0.5)] p-1" required>
+                            <label class="text-[rgba(255,255,255,0.4)] absolute left-12 top-1.5 peer-focus:-top-2 peer-valid:-top-2 pointer-events-none peer-focus:bg-[#11e4b3] peer-valid:bg-[#11e4b3] peer-focus:rounded-[0.4rem] peer-valid:rounded-[0.4rem] peer-focus:z-2 peer-focus:text-xs peer-valid:text-xs peer-focus:text-[#253144] peer-valid:text-[#253144] peer-focus:pl-2 peer-focus:pr-2 peer-valid:pl-2 peer-valid:pr-2 transition-all duration-1000">confirm password</label>
                         </div>
                     </div>
-                    <button>Register</button>
-                    <div>
-                        <button>Google Login</button>
-                        <button>Github Login</button>
+                    <button id="btn-register" class="pl-4 pr-4 pt-2 pb-2 rounded-2xl
+                    text-[rgba(255,255,254,0.5)]
+                    shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)] cursor-pointer active:scale-0.7 transition-bg duration-400 ease-linear active:scale-0.7 hover:bg-[#11e4b3ff] hover:text-[#253144]">Register</button>
+                    <div class="flex flex-wrap gap-3 justify-center items-center
+                    text-[#11e4b3]">
+                        <button class="pl-4 pr-4 pt-2 pb-2 rounded-2xl flex
+                        justify-center items-center gap-1
+                        shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)]"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="20" height="20" viewBox="0 0 48 48">
+                          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+</svg> Google
+                        Login</button>
+                        <button class="pl-4 pr-4 pt-2 pb-2 rounded-2xl flex
+                        justify-center items-center gap-1
+                        shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)]"><i
+                        class="fa-brands fa-github" style="color:
+                        #11e4b3ff;"></i>
+                        Github Login</button>
+                        <label for="check-box" class="pl-4 pr-4 pt-2 pb-2 rounded-2xl
+                        shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)] cursor-pointer transition-bg duration-400 ease-linear active:scale-0.7 hover:bg-[#11e4b3ff] hover:text-[#253144]">Login</label>
                     </div>
                 </from>
             </div>
-            <div class="none">
-                <from>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <button></button>
-                    <div><button></button>
-                        <button></button>
+            <div class="w-full hidden peer-checked:block">
+                <from class="flex flex-col justify-center items-center gap-8">
+                  <label class="absolute -top-5 pl-2 pr-2 pt-1 pb-1 bg-[#253144]
+                  text-[#11e4b3] rounded-lg
+                  shadow-[-4px_-4px_8px_rgba(255,255,255,0.1),4px_4px_12px_rgba(0,0,0,0.2)]">Login</label>
+                    <div class="flex justify-center items-center gap-3 relative">
+                        <i class="fa-regular fa-envelope border-r-1 solid pr-7 absolute left-2" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                        <div>
+                            <input type="email" id="email-lg" class="rounded-2xl pl-12 pt-2 pb-2 text-[#11e4b3] text-sm peer focus:border focus:outline-none focus:border-[#11e4b3] valid:border-[#11e4b3] valid-bg-none shadow-[-3px_-3px_14px_rgba(255,255,255,0.2),3px_3px_14px_rgba(0,0,0,0.5)] p-1" required>
+                            <label class="text-[rgba(255,255,255,0.4)] absolute left-12 top-1.5 peer-focus:-top-2 peer-valid:-top-2 pointer-events-none peer-focus:bg-[#11e4b3] peer-valid:bg-[#11e4b3] peer-focus:rounded-[0.4rem] peer-valid:rounded-[0.4rem] peer-focus:z-2 peer-focus:text-xs peer-valid:text-xs peer-focus:text-[#253144] peer-valid:text-[#253144] peer-focus:pl-2 peer-focus:pr-2 peer-valid:pl-2 peer-valid:pr-2 transition-all duration-1000">email address</label>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center gap-3 relative">
+                        <i class="fa-solid fa-lock border-r-1 solid pr-7 absolute left-2" style="color: hsla(166, 86%, 48%, 1.00);"></i>
+                        <div>
+                            <input type="password" id="password-lg" class="rounded-2xl pl-12 pt-2 pb-2 text-[#11e4b3] text-sm peer focus:border focus:outline-none focus:border-[#11e4b3] valid:border-[#11e4b3] shadow-[-3px_-3px_14px_rgba(255,255,255,0.2),3px_3px_14px_rgba(0,0,0,0.5)] p-1" required>
+                            <label class="text-[rgba(255,255,255,0.4)] absolute left-12 top-1.5 peer-focus:-top-2 peer-valid:-top-2 pointer-events-none peer-focus:bg-[#11e4b3] peer-valid:bg-[#11e4b3] peer-focus:rounded-[0.4rem] peer-valid:rounded-[0.4rem] peer-focus:z-2 peer-focus:text-xs peer-valid:text-xs peer-focus:text-[#253144] peer-valid:text-[#253144] peer-focus:pl-2 peer-focus:pr-2 peer-valid:pl-2 peer-valid:pr-2 transition-all duration-1000">password</label>
+                        </div>
+                    </div>
+                    <button id="btn-login" class="pl-4 pr-4 pt-2 pb-2 rounded-2xl
+                    text-[rgba(255,255,254,0.5)]
+                    shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)] cursor-pointer transition-bg duration-400 ease-linear active:scale-0.7 hover:bg-[#11e4b3ff] hover:text-[#253144]">Login</button>
+                    <div class="flex flex-wrap gap-3 justify-center items-center
+                    text-[#11e4b3]">
+                        <button class="pl-4 pr-4 pt-2 pb-2 rounded-2xl flex
+                        justify-center items-center gap-1
+                        shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)]"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="20" height="20" viewBox="0 0 48 48">
+                          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+</svg> Google
+                        Login</button>
+                        <button class="pl-4 pr-4 pt-2 pb-2 rounded-2xl flex
+                        justify-center items-center gap-1
+                        shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)]"><i
+                        class="fa-brands fa-github" style="color:
+                        #11e4b3ff;"></i>
+                        Github Login</button>
+                        <label for="check-box" class="pl-4 pr-4 pt-2 pb-2 rounded-2xl
+                        shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)] cursor-pointer transition-bg duration-400 ease-linear active:scale-0.7 hover:bg-[#11e4b3ff] hover:text-[#253144]">Register</label>
                     </div>
                 </from>
             </div>
         </div>
     </div>
-    <script src="./js/login.js"></script>
-    <script src="./register.js"></script>
+    <script src="../js/mcfunction.js"></script>
+    <script type="module" src="../js/register.js"></script>
+    <script type="module" src="../js/login.js"></script>
 </body>
 </html>
