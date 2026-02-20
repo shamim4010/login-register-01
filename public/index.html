@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Wallet | Home Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorem sed expedita odio recusandae suscipit nihil molestiae, sit dolores cum saepe quaerat quasi accusantium et consequuntur neque hic id quibusdam!</p>
+<body class="bg-[#253144] flex justify-center items-center w-full h-screen font-['Manrope',sans-serif]">
+    <div class="w-[70%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:[30%]">
+        <div class="bg-[#253144] border-7 solid border-[#253144] rounded-lg pt-9
+        relative flex justify-evenly
+        pb-9 pl-6 pr-6
+        shadow-[inset_-4px_-4px_8px_rgba(255,255,255,0.1),inset_4px_4px_12px_rgba(0,0,0,0.2),-4px_-4px_8px_rgba(255,255,255,0.1),4px_4px_12px_rgba(0,0,0,0.2)]">
+            <div>
+                <button id="btn-rg" class="pl-4 pr-4 pt-2 pb-2 rounded-2xl
+                    text-[rgba(255,255,254,0.5)]
+                    shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)] cursor-pointer active:scale-0.7 transition-all duration-200 ease-linear active:scale-0.7 hover:border-l-2 hover:border-r-2 hover:border-solid hover:border-l-[#11e4b3ff] hover:border-r-[#11e4b3ff]"><i class="fa-solid fa-right-to-bracket fa-fade text-[hsl(166,86%,48%)]"></i> Register</button>
+            </div> 
+            <div>
+                <button id="btn-lg" class="pl-4 pr-4 pt-2 pb-2 rounded-2xl
+                    text-[rgba(255,255,254,0.5)]
+                    shadow-[-4px_-4px_12px_rgba(255,255,255,0.2),4px_4px_12px_rgba(0,0,0,0.5)] cursor-pointer active:scale-0.7 transition-all duration-200 ease-linear active:scale-0.7 hover:border-l-2 hover:border-r-2 hover:border-solid hover:border-l-[#11e4b3ff] hover:border-r-[#11e4b3ff]"><i class="fa-solid fa-right-to-bracket fa-fade text-[hsl(166,86%,48%)]"></i> Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
 </body>
 </html>

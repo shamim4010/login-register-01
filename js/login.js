@@ -1,14 +1,13 @@
-import { users } from "./register.js";
-
 document.getElementById("btn-login").addEventListener("click", function (){
+    let userData = JSON.parse(localStorage.getItem('users')) || {};
     const loginUserEmail = document.getElementById("email-lg").value; 
     const loginPass = document.getElementById("password-lg").value;
 
-    for (let key in users){
-        if (loginUserEmail === users[key] || loginUserEmail === users[key].userEmail){
-            if (loginPass === users[key].userPass){
+    for (let key in userData){
+        if (loginUserEmail === userData[key] || loginUserEmail === userData[key].userEmail){
+            if (loginPass === userData[key].userPass){
                 alert("Login Success");
-                window.location.assign("../public/index.html");
+                window.location.assign("../public/home.html");
             }
             else {
                 alert("password is wrong")
@@ -17,5 +16,6 @@ document.getElementById("btn-login").addEventListener("click", function (){
         }
     }
     alert("username or email not exits")
+    return
 
 })
